@@ -1,5 +1,7 @@
 import {
-  drawerWidth
+  drawerWidth,
+  transition,
+  container
 } from "../commons.js";
 
 const appStyle = theme =>({
@@ -7,7 +9,25 @@ const appStyle = theme =>({
     position:"relative",
     top:"0",
     height:"100vh"
-  }
+  },
+  mainPanel: {
+    [theme.breakpoints.up("md")]: {
+      width: `calc(100% - ${drawerWidth}px)`
+    },
+    overflow: "auto",
+    position: "relative",
+    float: "right",
+    ...transition,
+    maxHeight: "100%",
+    width: "100%",
+    overflowScrolling: "touch"
+  },
+  content: {
+    marginTop: "70px",
+    padding: "30px 15px",
+    minHeight: "calc(100vh - 123px)"
+  },
+  container
 });
 
 export default appStyle;
