@@ -1,0 +1,9 @@
+{
+  "name": "react-dashboard",
+  "version": "1.0.0",
+  "description": "Boilerplate for making dashboard with react",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC"
+}
